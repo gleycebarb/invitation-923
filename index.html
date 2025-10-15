@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>923 X Italo Carlo</title>
+</head>
+<body>
+    <nav>
+        <h2><a href="index.html">923.2025</a></h2>
+        <h1><span>Com amor e resenha, 923.</span></h1>
+        <ul>
+            <li><a href="suatrajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="trajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <i id="open-menu-btn" class="fa-solid fa-bars"></i>
+    </nav>
+    <div class="menu">
+        <i id="close-menu-btn" class="fa-solid fa-xmark"></i>
+        <ul>
+            <li><a href="suatrajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="trajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2>Quer saber o que pensamos de você? Leia atentamente!</h2>    
+        <section>
+            <p>Desde o primeiro dia, você se tornou mais do que um professor — foi um amigo, um guia e uma inspiração. 
+                Entre códigos, risadas e projetos, a 923 aprendeu que o verdadeiro aprendizado vai além das telas: está na conexão humana e na troca sincera. 
+                Cada aula, cada brincadeira e cada desafio enfrentado juntos fez da sua presença uma parte essencial da nossa jornada. A forma como você acredita no potencial de cada um, mesmo quando duvidamos de nós mesmos, nos motivou a ir além dos nossos limites. 
+                Seu entusiasmo contagiante transformou o ambiente em um espaço seguro para errar, criar e crescer. 
+                A turma 923 carrega com orgulho o que você deixou em cada um de nós — lições que vão muito além do conteúdo, ensinamentos que influenciarão toda a nossa vida pessoal e profissional. Obrigado por ser essa luz que guia, inspira e transforma.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="f-item">
+            <p>Desenvolvido por: </p>
+            <b>Bárbara Gleyce</b>
+            <b>Charles Evaristo</b>
+        </div>
+        <div class="f-item">
+            <div class="icons">
+                <a href="https://instagram.com/923.ifal"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/everestp8/jifal-website-2025"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Copyright © 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        let menu = document.querySelectorAll('.menu')[0];
+        let def = '';
+        let counter = 0;
+
+        const toggleMenu = e => {
+            if (counter == 0)
+                def = menu.style.right;
+            menu.style.right = counter % 2 == 0 ? '0px' : def;
+            counter++;
+        };
+
+        document.querySelector('#open-menu-btn').addEventListener('click', toggleMenu);
+        document.querySelector('#close-menu-btn').addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

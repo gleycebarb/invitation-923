@@ -1,0 +1,155 @@
+body {
+    font-family: 'Outfit', Arial, sans-serif;
+    margin: 0;
+    background: #fafafa;
+    color: #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 1rem 2rem;
+}
+
+nav h2 a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 220px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.07);
+    transition: right 0.3s;
+    z-index: 100;
+    padding: 2rem 1rem;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.menu i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+header {
+    background: #d4af37;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    text-align: justify;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background: #f5f5f5;
+    padding: 1.5rem 2rem;
+    font-family: 'Outfit', Arial, sans-serif;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.f-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.icons a {
+    color: #222;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+
+.icons a:hover {
+    color: #d4af37;
+}
+
+@media (max-width: 600px) {
+    nav, footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    main {
+        padding: 0 0.5rem;
+    }
+}

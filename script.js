@@ -14,7 +14,6 @@ function changeSlide(direction) {
   slides[current].classList.add("active");
 }
 
-// Auto-slide (a cada 6 segundos)
 setInterval(() => {
   changeSlide(1);
 }, 6000);

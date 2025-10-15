@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajetória com a 923</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <nav>
+        <h2><a href="index.html">923.2025</a></h2>
+        <h1><span>Com amor e resenha, 923.</span></h1>
+        <ul>
+            <li><a href="trajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="suatrajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <i id="open-menu-btn" class="fa-solid fa-bars"></i>
+    </nav>
+    <div class="menu">
+        <i id="close-menu-btn" class="fa-solid fa-xmark"></i>
+        <ul>
+            <li><a href="trajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="suatrajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2>Sua trajetória com a turma 923</h2>
+        <section>
+            <p>Você foi contratado como professor substituto para a disciplina de Engenharia de Software, após um longo período em que a turma esteve sem aula devido à falta de um docente. Desde o primeiro dia, seu jeito leve, inteligente e divertido conquistou todos os alunos. Mesmo em uma situação temporária, sua postura carismática e dedicação fizeram com que fosse impossível não criar um vínculo afetivo com a turma.</p>
+            <p>Você não só supriu a necessidade imediata, mas também destacou-se como um professor inspirador, que conseguiu motivar e engajar os estudantes ao longo do período.</p>
+            <p>Entre tantos códigos, provas e trabalhos, o que realmente marcou nossa jornada foram os momentos compartilhados com pessoas incríveis e você certamente foi uma delas. Você foi mais do que um professor; foi uma companhia nas horas difíceis, um incentivo constante diante dos desafios e um amigo que acreditou em cada um de nós. A turma 923 não seria a mesma sem o seu apoio, sua compreensão e o afeto que dedicou a todos nós. Sua presença fez toda a diferença e ficará guardada na memória como parte essencial dessa caminhada.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="f-item">
+            <p>Desenvolvido por:</p>
+            <b>Bárbara Gleyce</b>
+            <b>Charles Evaristo</b>
+        </div>
+        <div class="f-item">
+            <div class="icons">
+                <a href="https://instagram.com/923.ifal"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/gleycebarb/invitation-923"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Copyright © 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        let menu = document.querySelectorAll('.menu')[0];
+        let def = '';
+        let counter = 0;
+
+        const toggleMenu = e => {
+            if (counter == 0)
+                def = menu.style.right;
+            menu.style.right = counter % 2 == 0 ? '0px' : def;
+            counter++;
+        };
+
+        document.querySelector('#open-menu-btn').addEventListener('click', toggleMenu);
+        document.querySelector('#close-menu-btn').addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

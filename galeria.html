@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria com a 923</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <h2><a href="index.html">923.2025</a></h2>
+        <h1><span>Com amor e resenha, 923.</span></h1>
+        <ul>
+            <li><a href="suatrajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="trajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <i id="open-menu-btn" class="fa-solid fa-bars" aria-hidden="true"></i>
+    </nav>
+
+    <div class="menu" aria-hidden="true">
+        <i id="close-menu-btn" class="fa-solid fa-xmark" aria-hidden="true"></i>
+        <ul>
+            <li><a href="suatrajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="trajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2>Galeria de Fotos com a 923</h2>
+        <section>
+            <p>Cada imagem reflete a alegria, a amizade e as experiências inesquecíveis que vivemos ao longo dessa jornada.</p>
+            <div class="gallery" aria-label="Galeria de fotos">
+                <div class="gallery-grid">
+                    <figure class="thumb">
+                        <img src="images/photo1.jpg" alt="Foto 1">
+                    </figure>
+                    <figure class="thumb">
+                        <img src="images/photo2.jpg" alt="Foto 2">
+                    </figure>
+                    <figure class="thumb">
+                        <img src="images/photo3.jpg" alt="Foto 3">
+                    </figure>
+                    <figure class="thumb">
+                        <img src="images/photo4.jpg" alt="Foto 4">
+                    </figure>
+                    <figure class="thumb">
+                        <img src="images/photo5.jpg" alt="Foto 5">
+                    </figure>
+                </div>
+                
+                <div class="gallery-controls" aria-hidden="false">
+                    <button class="btn" onclick="triggerAddPhotos()">Adicionar fotos</button>
+                    <button class="btn btn-ghost" onclick="clearGallery()">Limpar</button>
+                    <input id="files" type="file" accept="image/*" multiple style="display:none" onchange="handleFiles(event)">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="f-item">
+            <p>Desenvolvido por:</p>
+            <b>Bárbara Gleyce</b>
+            <b>Charles Evaristo</b>
+        </div>
+        <div class="f-item">
+            <div class="icons">
+                <a href="https://instagram.com/923.ifal" aria-label="Instagram da 923"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/gleycebarb/invitation-923" aria-label="Repositório no GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Copyright © 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        let menu = document.querySelectorAll('.menu')[0];
+        let def = '';
+        let counter = 0;
+
+        const toggleMenu = e => {
+            if (counter == 0) def = menu.style.right;
+            menu.style.right = counter % 2 == 0 ? '0px' : def;
+            counter++;
+        };
+
+        document.querySelector('#open-menu-btn').addEventListener('click', toggleMenu);
+        document.querySelector('#close-menu-btn').addEventListener('click', toggleMenu);
+
+        function triggerAddPhotos() {
+            const input = document.getElementById('files');
+            if (input) input.click();
+        }
+
+        function handleFiles(event) {
+            const files = Array.from(event.target.files || []);
+            const grid = document.querySelector('.gallery-grid');
+            if (!grid || files.length === 0) return;
+
+            files.forEach(file => {
+                if (!file.type.startsWith('image/')) return;
+                const url = URL.createObjectURL(file);
+                const fig = document.createElement('figure');
+                fig.className = 'thumb';
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = file.name;
+                img.onload = () => URL.revokeObjectURL(url);
+                fig.appendChild(img);
+                grid.appendChild(fig);
+            });
+
+            event.target.value = '';
+        }
+
+        function clearGallery() {
+            const grid = document.querySelector('.gallery-grid');
+            if (!grid) return;
+            grid.innerHTML = '<div class="thumb placeholder">Galeria vazia</div>';
+        }
+    </script>
+</body>
+</html>

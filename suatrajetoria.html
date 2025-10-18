@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Trajetória Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <nav>
+        <h2><a href="index.html">923.2025</a></h2>
+        <h1><span>Com amor e resenha, 923.</span></h1>
+        <ul>
+            <li><a href="trajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="suatrajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <i id="open-menu-btn" class="fa-solid fa-bars"></i>
+    </nav>
+    <div class="menu">
+        <i id="close-menu-btn" class="fa-solid fa-xmark"></i>
+        <ul>
+            <li><a href="trajetoria.html">Sua Trajetória com a 923</a></li>
+            <li><a href="suatrajetoria.html">Trajetória de Vida</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2>Sua trajetória Pessoal</h2>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sem enim, tempor a vulputate in, lacinia vel orci. 
+            Duis ut fermentum purus. Fusce vehicula elit leo. Ut ultrices elementum tincidunt. Quisque id maximus orci. 
+            Aliquam consequat sit amet felis tincidunt pellentesque. Etiam in purus leo. Suspendisse a felis risus. 
+            Maecenas blandit mollis lectus vel tincidunt. Curabitur semper augue leo, vel euismod sem cursus at. 
+            Etiam semper vestibulum mi, vitae fermentum nisl elementum eget. Suspendisse et nisl varius, ultricies tortor in, fringilla orci. 
+            Duis congue nisl ac ipsum pulvinar malesuada eget sed elit. Aenean quis iaculis orci. Mauris porttitor turpis eu ultrices malesuada.
+            Etiam quis nulla vestibulum, fermentum nisl vel, dignissim tellus. Integer bibendum mi id dolor rutrum, sit amet ullamcorper quam tempus. 
+            Nulla aliquet nulla sed euismod fringilla. Curabitur id malesuada augue. Aliquam ornare mi sit amet commodo efficitur. Integer et tempus purus. 
+            Suspendisse est nibh, laoreet nec est quis, pharetra cursus lectus. Sed eget ipsum vehicula, congue nunc non, auctor urna. Nunc rutrum sed augue in porttitor. 
+            Vestibulum maximus nibh vel dolor molestie, sed varius tellus euismod.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="f-item">
+            <p>Desenvolvido por:</p>
+            <b>Bárbara Gleyce</b>
+            <b>Charles Evaristo</b>
+        </div>
+        <div class="f-item">
+            <div class="icons">
+                <a href="https://instagram.com/923.ifal"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/gleycebarb/invitation-923"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>Copyright © 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        let menu = document.querySelectorAll('.menu')[0];
+        let def = '';
+        let counter = 0;
+
+        const toggleMenu = e => {
+            if (counter == 0)
+                def = menu.style.right;
+            menu.style.right = counter % 2 == 0 ? '0px' : def;
+            counter++;
+        };
+
+        document.querySelector('#open-menu-btn').addEventListener('click', toggleMenu);
+        document.querySelector('#close-menu-btn').addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

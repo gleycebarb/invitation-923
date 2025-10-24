@@ -151,9 +151,9 @@ footer {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 12px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .thumb {
@@ -161,20 +161,18 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100px;
+    display: block;
     position: relative;
+    aspect-ratio: 4 / 3;
+    min-height: 140px;
 }
 
 .thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     display: block;
 }
-
 .thumb.placeholder {
     border: 2px dashed #eee;
     color: #999;

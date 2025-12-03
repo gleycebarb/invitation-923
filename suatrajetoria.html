@@ -5,34 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua Trajetória Pessoal</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
+    <div id="loader">
+        <p>Prepare-se...</p>
+    </div>
     <header>
         <h1><span>Com amor e resenha, 923</span></h1>
     </header>
     <main>
         <h2>Sua trajetória Pessoal</h2>
         <section>
-            <p>Filho de dona Bernadete e do seu João de Deus. O segundo de três irmãos e o primeiro a passar no vestibular. 
-            Desde pequeno, era o tipo de aluno que se destacava sem precisar chamar atenção. Gênio da T.I de berço enquanto 
-            muitos sonhavam com engenharia, medicina, ele descobriu o computador... e foi ali que o destino fez morada. 
-            Casado com a contadora Mayara Ingred, pai de pet, flamenguista apaixonado, corredor nas horas vagas, jogador de videogame 
-            e colecionador de super-heróis uma paixão da infância que ele carrega até hoje com orgulho. Ítalo foi aluno nota 10 desde a escolinha da Luluzinha até a graduação e, 
-            após se formar, trabalhou por mais de 10 anos como programador em Maceió. Mas o coração? Sempre pulsava por Arapiraca.
-            E foi esse desejo de voltar pra casa que o levou aos concursos públicos tentou várias vezes, sem desistir.
-            Até que chegou o edital perfeito: UFAL Arapiraca 2009. Um concurso que unia o que ele amava fazer com o sonho de estar perto da família. 
-            E a aprovação veio, como presente, na véspera de Natal. Foi o primeiro da família a fazer mestrado e parte dele em Portugal, onde ampliou seu olhar, 
-            seus conhecimentos e sua rede de conexões.</p>
+            <p>Filho de dona Bernadete e do seu João de Deus. O segundo de três irmãos e o primeiro a passar no
+                vestibular.
+                Desde pequeno, era o tipo de aluno que se destacava sem precisar chamar atenção. Gênio da T.I de berço
+                enquanto
+                muitos sonhavam com engenharia, medicina, ele descobriu o computador... e foi ali que o destino fez
+                morada.
+                Casado com a contadora Mayara Ingred, pai de pet, flamenguista apaixonado, corredor nas horas vagas,
+                jogador de videogame
+                e colecionador de super-heróis uma paixão da infância que ele carrega até hoje com orgulho. Ítalo foi
+                aluno nota 10 desde a escolinha da Luluzinha até a graduação e,
+                após se formar, trabalhou por mais de 10 anos como programador em Maceió. Mas o coração? Sempre pulsava
+                por Arapiraca.
+                E foi esse desejo de voltar pra casa que o levou aos concursos públicos tentou várias vezes, sem
+                desistir.
+                Até que chegou o edital perfeito: UFAL Arapiraca 2009. Um concurso que unia o que ele amava fazer com o
+                sonho de estar perto da família.
+                E a aprovação veio, como presente, na véspera de Natal. Foi o primeiro da família a fazer mestrado e
+                parte dele em Portugal, onde ampliou seu olhar,
+                seus conhecimentos e sua rede de conexões.</p>
 
             <p>Mesmo sendo introspectivo, Ítalo nunca deixou isso limitar suas escolhas. Sempre buscou se desafiar:
-            participou de bancas de TCC, escreveu artigos para publicação em grandes eventos na área, incentivou quem estava por perto a estudar, 
-            a se qualificar. E quando surgiu a chance de lecionar, ele tentou foi aprovado como professor substituto em segundo lugar, mas não foi chamado. 
-            E quando surgiu a chance de lecionar, ele tentou foi aprovado como professor substituto em segundo lugar, mas não foi chamado. 
-            A vida respondeu com uma nova oportunidade: a primeira colocada desistiu. O edital reabriu. Ítalo tentou de novo. E foi APROVADO novamente.
-            Ítalo é a maior referência de persistência que conhecemos. Ele escolheu ensinar, não apenas para melhorar sua didática, 
-            mas para impactar aqueles alunos que, como ele um dia, sonhavam em realizar os seus sonhos.</p>
+                participou de bancas de TCC, escreveu artigos para publicação em grandes eventos na área, incentivou
+                quem estava por perto a estudar,
+                a se qualificar. E quando surgiu a chance de lecionar, ele tentou foi aprovado como professor substituto
+                em segundo lugar, mas não foi chamado.
+                E quando surgiu a chance de lecionar, ele tentou foi aprovado como professor substituto em segundo
+                lugar, mas não foi chamado.
+                A vida respondeu com uma nova oportunidade: a primeira colocada desistiu. O edital reabriu. Ítalo tentou
+                de novo. E foi APROVADO novamente.
+                Ítalo é a maior referência de persistência que conhecemos. Ele escolheu ensinar, não apenas para
+                melhorar sua didática,
+                mas para impactar aqueles alunos que, como ele um dia, sonhavam em realizar os seus sonhos.</p>
         </section>
         <div style="text-align:center; margin-top:2rem;">
             <a href="trajetoria.html" class="btn-gold">Ver nossa história juntos</a>
@@ -53,6 +72,18 @@
         </div>
     </footer>
     <script>
+        window.onload = function () {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 500);
+                }
+            }, 2500);
+        };
+
         let menu = document.querySelectorAll('.menu')[0];
         let def = '';
         let counter = 0;

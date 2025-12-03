@@ -56,8 +56,13 @@ body{
 }
 
 .ask{
-  font-weight:700;
-  margin-top:12px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.ask b {
+  font-weight: 900;
+  color: green;
 }
 
 .signature{

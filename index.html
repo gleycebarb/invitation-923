@@ -3,96 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Sistema</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-        type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/home.css">
-    <title>923 X Italo Carlo</title>
-
     <style>
-        .btn-gold {
-            padding: 0.8rem 2rem;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f5f5;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .login-box {
+            width: 330px;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.8rem;
             background: #d4af37;
             color: white;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1rem;
             transition: 0.2s;
         }
 
-        .btn-gold:hover {
+        .login-btn:hover {
             background: #b8922b;
+        }
+
+        .error-text {
+            margin-top: 1rem;
+            color: red;
+            font-size: 0.9rem;
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <h2><a href="index.html">923.2025</a></h2>
-        <h1><span>Com amor e resenha, 923.</span></h1>
-        <ul>
-            <li><a href="trajetoria.html">Sua Trajetória com a 923</a></li>
-            <li><a href="suatrajetoria.html">Trajetória de Vida</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-        </ul>
-        <i id="open-menu-btn" class="fa-solid fa-bars"></i>
-    </nav>
-    <div class="menu">
-        <i id="close-menu-btn" class="fa-solid fa-xmark"></i>
-        <ul>
-            <li><a href="trajetoria.html">Sua Trajetória com a 923</a></li>
-            <li><a href="suatrajetoria.html">Trajetória de Vida</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-        </ul>
+    <div class="login-box">
+        <h2>Acesso Restrito</h2>
+        <input type="text" id="user" placeholder="Usuário">
+        <input type="password" id="pass" placeholder="Senha">
+        <button class="login-btn" id="login">Entrar</button>
+        <p class="error-text" id="error">Erro inesperado: 0x00FATAL — tente novamente.</p>
     </div>
-    <main>
-        <h2>Quer saber o que pensamos de você? Leia atentamente!</h2>
-        <section>
-            <p>Desde o primeiro dia, você se tornou mais do que um professor... você foi um amigo, um guia e uma
-                inspiração.
-                Entre códigos, risadas e projetos, a 923 aprendeu que o verdadeiro aprendizado vai além das telas, que
-                está na conexão humana e na troca sincera.
-                Cada aula, cada brincadeira e cada desafio enfrentado juntos fez da sua presença uma parte essencial da
-                nossa jornada. A forma como você acredita no potencial de cada um, mesmo quando duvidamos de nós mesmos,
-                nos motivou a ir além dos nossos limites.
-                Seu entusiasmo contagiante transformou o ambiente em um espaço seguro para errar, criar e crescer.
-                A turma 923 carrega com orgulho o que você deixou em cada um de nós, lições que vão muito além do
-                conteúdo, ensinamentos que influenciarão toda a nossa vida pessoal e profissional. Obrigado por ser essa
-                luz que guia, inspira e transforma.</p>
-        </section>
-        <div style="text-align:center; margin-top:2rem;">
-            <a href="convite.html" class="btn-gold">VER CONVITE ESPECIAL</a>
-        </div>
-    </main>
-    <footer>
-        <div class="f-item">
-            <p>Desenvolvido por: </p>
-            <b>Bárbara Gleyce</b>
-            <b>Erick Avelino</b>
-        </div>
-        <div class="f-item">
-            <div class="icons">
-                <a href="https://instagram.com/923.ifal"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/gleycebarb/invitation-923"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <p>Copyright © 2025 All Rights Reserved</p>
-        </div>
-    </footer>
+
     <script>
-        let menu = document.querySelectorAll('.menu')[0];
-        let def = '';
-        let counter = 0;
+        const btn = document.getElementById('login');
+        const errorText = document.getElementById('error');
 
-        const toggleMenu = e => {
-            if (counter == 0)
-                def = menu.style.right;
-            menu.style.right = counter % 2 == 0 ? '0px' : def;
-            counter++;
-        };
+        btn.addEventListener('click', () => {
+            errorText.style.display = 'block';
 
-        document.querySelector('#open-menu-btn').addEventListener('click', toggleMenu);
-        document.querySelector('#close-menu-btn').addEventListener('click', toggleMenu);
+            setTimeout(() => {
+                window.location.href = "suatrajetoria.html";
+            }, 2200);
+        });
     </script>
 </body>
 </html>

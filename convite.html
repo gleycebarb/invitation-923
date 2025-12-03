@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .center-box {
+            max-width: 600px;
+            margin: 4rem auto;
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-area {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            background: #05801f;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #no-btn {
+            background: #d32f2f;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <h2>Professor Ítalo...</h2>
+        <p>Temos um pedido muito especial: você aceita ser o padrinho de formatura da turma 923?</p>
+        <div class="btn-area">
+            <a class="btn" href="sim.html">SIM</a>
+            <div id="no-btn" class="btn">NÃO???</div>
+        </div>
+    </div>
+    <script>
+        const noBtn = document.getElementById('no-btn');
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * 300 - 150;
+            const y = Math.random() * 300 - 150;
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
+</body>
+</html>

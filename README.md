@@ -28,4 +28,6 @@ O convite expressa gratidão, reconhecimento e admiração — valores fundament
 - **JavaScript**
 - Google Fonts
 
+---
+
 ## Desenvolvido por: Bárbara Gleyce e Erick Davi (923.2025)
